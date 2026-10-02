@@ -105,6 +105,7 @@ WikiRAG/
 ### 1. Installation
 
 Clone the repository and install dependencies:
+
 ```bash
 git clone https://github.com/swarajgupta/Project-Build-an-LLM-powered-Chatbot-with-RAG-using-LlamaIndex.git
 cd Project-Build-an-LLM-powered-Chatbot-with-RAG-using-LlamaIndex
@@ -114,14 +115,18 @@ pip install -r requirements.txt
 ### 2. Environment Configuration (Optional for Live Mode)
 
 Copy `.env.example` and set your OpenAI API key:
+
 ```bash
 cp .env.example .env
 ```
+
 In `.env`:
+
 ```ini
 OPENAI_API_KEY=sk-your-openai-api-key-here
 DEFAULT_MODEL=gpt-4o-mini
 ```
+
 *(Note: If no API key is provided, the system automatically defaults to `mock-mode`, allowing immediate local testing!)*
 
 ---
@@ -129,19 +134,25 @@ DEFAULT_MODEL=gpt-4o-mini
 ## Usage
 
 ### 1. Launch the Streamlit Web App
+
 ```bash
 streamlit run streamlit_app.py
 ```
+
 - Select your model (`gpt-4o-mini`, `gpt-4o`, `gpt-3.5-turbo`, or `mock-mode`).
 - Choose a topic preset or enter custom Wikipedia pages (e.g. `Paris, Batman, Python`).
 - Click **Build Knowledge Index** and converse with the ReAct agent!
 
 ### 2. Run via Command-Line Interface (CLI)
+
 Query a topic directly from your terminal:
+
 ```bash
 python cli.py --pages "Batman, Paris" --query "Who created Batman?" --model mock-mode
 ```
+
 Or start an interactive terminal chat session:
+
 ```bash
 python cli.py --pages "Python, Artificial Intelligence" --model mock-mode
 ```
@@ -151,9 +162,11 @@ python cli.py --pages "Python, Artificial Intelligence" --model mock-mode
 ## Running Automated Tests
 
 Run the complete test suite with pytest:
+
 ```bash
 python -m pytest tests/
 ```
+
 All **14 unit tests** pass in ~0.12 seconds with full mock coverage.
 
 ---
